@@ -10,14 +10,14 @@
    <children>
       <Pane id="operation" prefHeight="158.0" prefWidth="540.0">
          <children>
-            <Label id="login_logo" fx:id="login_logo" prefHeight="15.0" prefWidth="200.0" style="-fx-text-fill: #666666;" styleClass="logo" text="真•聊天宝" />
-            <Button id="login_min" fx:id="login_min" layoutX="454.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="43.0" styleClass="min" />
-            <Button id="login_close" fx:id="login_close" layoutX="494.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="43.0" styleClass="close" />
+            <Label id="login_logo" prefHeight="15.0" prefWidth="200.0" style="-fx-text-fill: #666666;" styleClass="logo" text="真•聊天宝" />
+            <Button id="login_min" layoutX="454.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="43.0" styleClass="min" />
+            <Button id="login_close" layoutX="494.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="43.0" styleClass="close" />
          </children>
       </Pane>
       <Pane id="headImag" layoutX="80.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" />
-      <TextField id="userId" layoutX="200.0" layoutY="200.0" prefHeight="45.0" prefWidth="250.0" promptText="账号" />
-      <PasswordField id="userPwd" layoutX="200.0" layoutY="255.0" prefHeight="45.0" prefWidth="250.0" promptText="密码" />
+      <TextField id="login_username" layoutX="200.0" layoutY="200.0" prefHeight="45.0" prefWidth="250.0" promptText="账号" />
+      <PasswordField id="login_password" layoutX="200.0" layoutY="255.0" prefHeight="45.0" prefWidth="250.0" promptText="密码" />
       <Button id="login_button" layoutX="200.0" layoutY="345.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="250.0" styleClass="login_button" text="登录" />
       <Label id="version" layoutX="5.0" layoutY="398.0" prefHeight="15.0" prefWidth="400.0" text="v1.0 MT | http://baidu.com" />
    </children>
