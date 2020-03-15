@@ -1,30 +1,36 @@
 package login.bussiness;
 
+import login.ui.ILoginEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import utils.CommonValidate;
+import org.springframework.stereotype.Service;
 import utils.StringUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginService {
+@Service(value = "loginService")
+public class LoginService implements ILoginEvent {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginService.class);
 
-    private static final String USERNAME="admin";
-    private static final String PASSWORD="123456";
+    public static final String USERNAME="admin";
+    public static final String PASSWORD="123456";
 
-    public Map<String, Object> loginAction(Map<String, Object> paramMap){
-        logger.info("invoke method logAction with paramMap = {}",new Object[]{paramMap});
-        String username = CommonValidate.validateVariable(paramMap, "username");
-        String password = CommonValidate.validateVariable(paramMap, "password");
+
+    @Override
+    public Map<String, Object> doLoginCheck(String userName, String userPassword) {
+        logger.info("invoke method logAction with userName={}, userPassword = {}",
+                new Object[]{userName, userPassword});
 
         Map<String, Object> resultMap = new HashMap<>();
         boolean loginCorrect = false;
 
-        if (StringUtils.equalsIgnoreCase(USERNAME, username) &&
-                StringUtils.equalsIgnoreCase(PASSWORD, password)){
+        if (StringUtils.equalsIgnoreCase(USERNAME, userName) &&
+                StringUtils.equalsIgnoreCase(PASSWORD, userPassword)){
+            System.out.println("登录成功。。。");
             loginCorrect = true;
+        }else{
+            System.out.println("登录失败。。。");
         }
 
         resultMap.put("isLogin", loginCorrect);

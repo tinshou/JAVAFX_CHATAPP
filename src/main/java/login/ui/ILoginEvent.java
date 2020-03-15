@@ -1,5 +1,7 @@
 package login.ui;
 
+import java.util.Map;
+
 public interface ILoginEvent {
 
     /**
@@ -7,5 +9,5 @@ public interface ILoginEvent {
      * @param userName
      * @param userPassword
      */
-    public void doLoginCheck(String userName, String userPassword);
+    public Map<String, Object> doLoginCheck(String userName, String userPassword);
 }

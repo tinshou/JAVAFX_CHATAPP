@@ -1,14 +1,18 @@
 import javafx.stage.Stage;
-import login.ui.ILoginMethod;
+import login.bussiness.LoginService;
+import login.ui.ILoginEvent;
 import login.ui.LoginController;
+import org.springframework.web.bind.annotation.RestController;
 
+
+@RestController
 public class Application extends javafx.application.Application {
+
+    private LoginService loginService = new LoginService();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ILoginMethod login = new LoginController((username, password) -> {
-            System.out.println("用户名："+username+" ,密码："+password);
-        });
+        LoginController login = new LoginController(loginService);
         login.doShow();
     }
 

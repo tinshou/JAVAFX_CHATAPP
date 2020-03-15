@@ -3,9 +3,6 @@ package login.ui;
 import login.bussiness.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class LoginController extends LoginInit implements ILoginMethod{
 
     private LoginView loginView;
@@ -39,17 +36,5 @@ public class LoginController extends LoginInit implements ILoginMethod{
 
     @Override
     public void doLogin() {
-        Map<String, Object> loginParam = new HashMap<String, Object>();
-        loginParam.put("username", loginInit.login_username.getText());
-        loginParam.put("password", loginInit.login_password.getText());
-
-        Map<String, Object> loginResultMap = loginService.loginAction(loginParam);
-
-        boolean loginStatus = (Boolean) loginResultMap.get("isLogin");
-        if (loginStatus){
-            System.out.println("登录成功。。");
-        }else{
-            System.out.println("登录失败。。");
-        }
     }
 }
