@@ -1,3 +1,4 @@
+import chat.Chat;
 import javafx.stage.Stage;
 import login.bussiness.LoginService;
 import login.ui.ILoginEvent;
@@ -12,8 +13,11 @@ public class Application extends javafx.application.Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        LoginController login = new LoginController(loginService);
-        login.doShow();
+        //  登录窗口
+//        LoginController login = new LoginController(loginService);
+//        login.doShow();
+        Chat chat = new Chat();
+        chat.show();
     }
 
     public static void main(String[] args) throws Exception{

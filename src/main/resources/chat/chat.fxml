@@ -7,15 +7,20 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1243.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane id="chat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1243.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="820.0" prefWidth="76.0" style="-fx-background-color: black;">
          <children>
-            <Button layoutX="13.0" layoutY="23.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
-            <Button layoutX="23.0" layoutY="220.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
-            <Button layoutX="23.0" layoutY="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
-            <Button layoutX="23.0" layoutY="160.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
-            <Button layoutX="28.0" layoutY="770.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" />
+             <!--头像-->
+             <Button id="bar_portrait" layoutX="13.0" layoutY="23.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
+             <!--收藏-->
+             <Button id="bar_location" layoutX="23.0" layoutY="220.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+             <!--聊天-->
+             <Button id="bar_chat" layoutX="23.0" layoutY="100.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+             <!--好友-->
+             <Button id="bar_friend" layoutX="23.0" layoutY="160.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" />
+             <!--设置-->
+             <Button id="bar_set" layoutX="28.0" layoutY="770.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" />
          </children>
       </Pane>
       <Pane layoutX="76.0" layoutY="1.0" prefHeight="818.0" prefWidth="1166.0">
