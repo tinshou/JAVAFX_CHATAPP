@@ -24,7 +24,7 @@
       </Pane>
 
       <!--group_bar_chat-->
-      <Pane id="group_bar_chat" layoutX="76.0" layoutY="1.0" prefHeight="818.0" prefWidth="1166.0">
+      <Pane id="group_bar_chat" layoutX="76.0" layoutY="1.0" prefHeight="818.0" prefWidth="1166.0" visible="false">
          <children>
             <!--操作栏-->
             <Pane id="operation" layoutX="315.0" prefHeight="32.0" prefWidth="852.0" style="-fx-background-color: red;">
@@ -55,7 +55,6 @@
                <children>
                   <TextField id="tx_input" layoutX="20.0" prefHeight="90.0" prefWidth="813.0" styleClass="tx_input_style" />
                </children></Pane>
-            <!--发送-->
             <Pane layoutX="314.0" layoutY="774.0" prefHeight="90.0" prefWidth="852.0">
                <children>
                   <Label id="touch_send" layoutX="730.0" layoutY="4.0" prefHeight="34.0" prefWidth="85.0" text="发送" />
@@ -76,6 +75,41 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="798.0" layoutY="402.0" prefHeight="200.0" prefWidth="200.0" />
+
+      <!--group_bar_friend-->
+      <Pane id="group_bar_friend" layoutX="76.0" layoutY="1.0" prefHeight="818.0" prefWidth="1166.0">
+         <children>
+            <Pane id="operation" layoutX="314.0" prefHeight="32.0" prefWidth="852.0" style="-fx-background-color: red;">
+               <children>
+                  <Button id="group_bar_friend_min" layoutX="767.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" styleClass="min" />
+                  <Button id="group_bar_friend_close" layoutX="810.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" styleClass="close" />
+               </children>
+            </Pane>
+            <!--内容栏-->
+            <Pane id="content" layoutX="314.0" layoutY="32.0" prefHeight="797.0" prefWidth="852.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Pane id="content_pane" prefHeight="44.0" prefWidth="852.0">
+                     <children>
+                        <Label id="content_name" layoutX="40.0" layoutY="-8.0" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: black;" />
+                     </children>
+                  </Pane>
+                  <Pane id="content_pane_box" layoutX="1.0" layoutY="45.0" prefHeight="797.0" prefWidth="850.0" />
+               </children>
+            </Pane>
+            <!--搜索栏-->
+            <Pane prefHeight="80.0" prefWidth="314.0" styleClass="search">
+               <children>
+                  <TextField layoutX="20.0" layoutY="30.0" prefHeight="30.0" prefWidth="240.0" style="-fx-background-color: grey;" styleClass="searchInput" />
+                  <Label layoutX="270.0" layoutY="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: grey;" styleClass="searchAdd" />
+               </children>
+            </Pane>
+            <!--好友栏-->
+            <Pane id="friend" layoutY="80.0" prefHeight="738.0" prefWidth="314.0">
+               <children>
+                  <ListView id="friendList" prefHeight="738.0" prefWidth="314.0" style="-fx-background-color: grey;" styleClass="friendListStyle" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
    </children>
 </Pane>
