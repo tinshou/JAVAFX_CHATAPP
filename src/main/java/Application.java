@@ -1,4 +1,6 @@
+import chat.ChatController;
 import chat.ChatInit;
+import chat.IChatMethod;
 import javafx.stage.Stage;
 import login.bussiness.LoginService;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +16,9 @@ public class Application extends javafx.application.Application {
         //  登录窗口
 //        LoginController login = new LoginController(loginService);
 //        login.doShow();
-        ChatInit chat = new ChatInit();
+        ChatController chat = new ChatController(() -> {
+            System.out.println("打开聊天界面。。。");
+        });
         chat.show();
     }
 

@@ -15,6 +15,7 @@ public class LoginEventDefine {
         min();
         quit();
         doEventLogin();
+
     }
 
     /**
