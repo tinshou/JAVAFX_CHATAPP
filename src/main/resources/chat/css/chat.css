@@ -1,6 +1,6 @@
 @import "chat_bar.css";
 @import "group_bar_friend/group_bar_friend.css";
-
+/*需要在css_sheet里定义此文件目录才可以生效*/
 #Chat{
     -fx-background-radius: 4px;
     -fx-border-width: 1px;
