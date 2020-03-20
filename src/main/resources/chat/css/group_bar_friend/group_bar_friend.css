@@ -1,0 +1,9 @@
+
+#group_bar_friend{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+.min{
+    -fx-background-color: transparent;
+    -fx-background-image: url('/chat/img/system/min_0.png');
+}
